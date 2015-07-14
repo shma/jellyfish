@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  script.
+    $( function() {
+        // ドキュメントロードに実行する初期化コード
+      $('#add').on('click', function() {
+        console.log('add jellyfish');
+        socket.emit('addJellyFish', { color: 'red' });
+      });
+    });  
+    
+  button#add Add Jellyfish 

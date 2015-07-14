@@ -24,3 +24,10 @@ coverage
 
 # Benchmarking
 benchmarks/graphs
+
+# General
+*.swp
+*.diff
+.venv
+.rvmrc
+.~lock.*

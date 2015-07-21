@@ -6,8 +6,14 @@ block content
         // ドキュメントロードに実行する初期化コード
       $('#add').on('click', function() {
         console.log('add jellyfish');
-        socket.emit('addJellyFish', { color: 'red' });
+        console.log($(".color").val());
+        socket.emit('addJellyFish', { color: $(".color").val() });
       });
     });  
     
-  button#add Add Jellyfish 
+  form
+    .form-group
+      label(for='exampleInputEmail1') Color : 
+      | 
+      input.color
+  button#add.btn.btn-default.btn-outline-inverse Generate Jellyfish 

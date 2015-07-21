@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var jellyfish = require('./routes/jellyfish');
 
 var app = express();
 var server = require('http').Server(app);
@@ -42,6 +43,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/jellyfish', jellyfish);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
